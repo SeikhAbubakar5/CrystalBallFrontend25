@@ -1,12 +1,43 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Military Asset Management System
+A full-stack MERN application that helps military personnel manage assets like weapons, vehicles, and ammunition. This system includes role-based access (Admin, Base Commander, Logistics Officer), asset tracking, purchase/transfer logging, and assignment features.
 
-Currently, two official plugins are available:
+Tech Stack
+Frontend	-React, Material-UI, Axios,hot-toast,react-router-dom.
+Backend	-Node.js, Express.js, MongoDB, Mongoose.
+Auth-	JWT-based Authentication
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+-User Login & Registration
+-Create Assets
+ -Log Purchases & Transfers
+ -Assign Assets to Personnel
+ -View Filtered Assets by Base, Type, and Date
+ -View History: Purchases, Transfers, Assignments
+ -Role-based UI Controls.
 
-## Expanding the ESLint configuration
+Backend Setup
+start command :-npm start
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=SECRET
+PORT=8080
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Frontend setup
+Install dependencies: npm install
+start command:-npm run dev
+
+API Endpoints
+ Method         Endpoint           Description             
+
+ POST    `/api/auth/register`    Register user           
+ POST    `/api/aith/login`       Login user & return JWT 
+ POST    `/api/asset`       Create a new asset      
+ POST    `/api/purchase`    Record a purchase       
+ POST    `/api/transfer`    Record a transfer       
+ POST    `/api/assignment`  Assign an asset         
+ GET     `/api/dashboard`   Get filtered assets     
+ GET     `/api/purchase`    Get purchase history    
+ GET     `/api/transfer`   Get transfer history    
+ GET     `/api/assignment`  Get assignment history  
+
